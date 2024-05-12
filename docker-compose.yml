@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  final-project:
+    image: final-project:latest
+    ports:
+      - "80:80"
+
