@@ -1,1 +1,1 @@
-echo "thambi"
+echo ""
