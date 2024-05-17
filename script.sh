@@ -1,1 +1,1 @@
-echo "mmm"
+echo ""
