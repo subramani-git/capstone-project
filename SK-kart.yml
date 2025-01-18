@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: SK-kart
-        image: SK-kart:latest
+        image: SK-kart:1
         ports:
         - containerPort: 80
 ---
