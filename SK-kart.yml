@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: SK-kart-deployment
+  labels:
+    app: SK-kart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: SK-kart
+  template:
+    metadata:
+      labels:
+        app: SK-kart
+    spec:
+      containers:
+      - name: SK-kart
+        image: SK-kart:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: SK-kart-service
+  labels:
+    app: SK-kart
+spec:
+  selector:
+    app: SK-kart
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
